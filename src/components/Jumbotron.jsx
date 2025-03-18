@@ -4,13 +4,22 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 
 const Jumbotron = () => {
   return (
-    <Container fluid className="jumbotron">
+    <Container
+      fluid
+      className="jumbotron d-flex align-items-center justify-content-center text-center"
+      style={{ minHeight: "50vh", backgroundColor: "#f1f3f5" }}
+    >
       <Row>
-        <Col md={8} className="text-center text-md-left">
-          <h1>Bienvenido a nuestra página</h1>
-          <p>Aquí puedes encontrar los mejores productos y servicios.</p>
+        <Col>
+          <h1>Software Developer</h1>
+          <p>
+            I am a software developer specializing in{" "}
+            <strong>programming</strong>, <strong>web development</strong>, and
+            solutions using <strong>Google Cloud</strong> and{" "}
+            <strong>AWS</strong>.
+          </p>
           <Button variant="primary" size="lg">
-            Descubre más
+            Explore my projects
           </Button>
         </Col>
       </Row>

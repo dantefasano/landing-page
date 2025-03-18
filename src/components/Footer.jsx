@@ -3,10 +3,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-center py-3">
+    <footer className="bg-dark text-white text-center py-3">
       <p>
-        &copy; {new Date().getFullYear()} Tu Nombre. Todos los derechos
-        reservados.
+        &copy; {new Date().getFullYear()} Dante Fasano. All rights reserved.
       </p>
     </footer>
   );

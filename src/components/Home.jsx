@@ -1,53 +1,61 @@
 // src/components/Home.jsx
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import NavigationBar from "./Navbar";
-import IntroJumbotron from "./Jumbotron";
+import Jumbotron from "./Jumbotron";
 import InfoCard from "./Card";
 import Footer from "./Footer";
-import { Row, Col } from "react-bootstrap";
 
 const cardData = [
   {
-    title: "Card 1",
-    text: "This is card 1 description.",
-    imageUrl: "https://via.placeholder.com/150",
-    buttonText: "Go to Card 1",
+    title: "Project 1",
+    text: "Project 1 description.",
+    imageUrl: "https://via.placeholder.com/500x325",
+    buttonText: "More details",
     link: "#card1",
   },
   {
-    title: "Card 2",
-    text: "This is card 2 description.",
-    imageUrl: "https://via.placeholder.com/150",
-    buttonText: "Go to Card 2",
+    title: "Project 2",
+    text: "Project 2 description.",
+    imageUrl: "https://via.placeholder.com/500x325",
+    buttonText: "More details",
     link: "#card2",
   },
   {
-    title: "Card 3",
-    text: "This is card 3 description.",
-    imageUrl: "https://via.placeholder.com/150",
-    buttonText: "Go to Card 3",
+    title: "Project 3",
+    text: "Project 3 description.",
+    imageUrl: "https://via.placeholder.com/500x325",
+    buttonText: "More details",
     link: "#card3",
+  },
+  {
+    title: "Project 4",
+    text: "Project 4 description.",
+    imageUrl: "https://via.placeholder.com/500x325",
+    buttonText: "More details",
+    link: "#card4",
   },
 ];
 
 const Home = () => (
   <div>
     <NavigationBar />
-    <IntroJumbotron />
-    <Row className="d-flex justify-content-around">
-      {cardData.map((card, index) => (
-        <Col key={index} xs={12} sm={6} md={4} lg={3}>
-          <InfoCard
-            title={card.title}
-            text={card.text}
-            imageUrl={card.imageUrl}
-            buttonText={card.buttonText}
-            link={card.link}
-          />
-        </Col>
-      ))}
-    </Row>
-    <Footer /> {/* Aquí se agrega el Footer */}
+    <Container>
+      <Jumbotron />
+      <Row className="justify-content-center">
+        {cardData.map((card, index) => (
+          <Col
+            key={index}
+            md={6}
+            lg={3}
+            className="d-flex justify-content-center"
+          >
+            <InfoCard {...card} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+    <Footer />
   </div>
 );
 

@@ -1,6 +1,5 @@
-/* src/index.css o src/styles.css */
 .navbar {
-  background-color: #f8f9fa; /* Fondo claro */
+  background-color: #f8f9fa;
 }
 
 .navbar-nav .nav-link {
@@ -10,4 +9,24 @@
 
 .navbar-brand {
   font-weight: bold;
+}
+
+.custom-toggler {
+  border: 2px solid white;
+}
+
+.custom-nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.custom-nav .nav-link {
+  color: white !important;
+  padding: 10px;
+}
+
+.custom-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
